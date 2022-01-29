@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import 'variables';
+@import '~bootstrap/scss/bootstrap';
+body{
+    padding: 0;
+    margin: 0;
+}
+label{
+    margin-bottom: 3px;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 0.8em;
+}
+.main-content{
+    min-height: calc( 100vh - 40px);
+}
+@media (max-width: 991px){
+    .main-sidebar{
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 350px;
+        right: -100%;
+        transition: 0.3s right;
+        background-color: #fff;
+        z-index: 5000;
+        padding: 0;
+        -webkit-box-shadow: 0px 0px 11px 3px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 0px 11px 3px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 0px 11px 3px rgba(34, 60, 80, 0.2);
+        &.active{
+            right: 0;
+        }
+    }
+}
+.main-menu{
+    border-top: 1px solid #ccc;
+    .nav-item{
+        margin-top: -1px;
+        border-top: 1px solid transparent;
+        &.active{
+            border-top: 1px solid $success;
+        }
+        .nav-link{
+            color: #fff;
+        }
+    }
+    
+}
+.copy-input{
+    position: fixed;
+    top: -9999px;
+    left: -9999px;
+}
+.datepickers-container{
+    z-index: 10000;
+}
+.preview_img{
+    height: 150px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    .buttons{
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+}
